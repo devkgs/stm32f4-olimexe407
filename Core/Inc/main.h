@@ -58,6 +58,7 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define LWIP_NETIF_HOSTNAME 1
 #define LED_Pin GPIO_PIN_13
 #define LED_GPIO_Port GPIOC
 #define ETH_NRST_Pin GPIO_PIN_6

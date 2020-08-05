@@ -1,0 +1,5 @@
+/home/skrieg/softs_installed/clion-2020.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/skrieg/Dev/cube/stm32f4-olimexe407
+-- Minimal optimization, debug info included
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/skrieg/Dev/cube/stm32f4-olimexe407/cmake-build-debug
