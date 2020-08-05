@@ -24,3 +24,4 @@ nbproject
 /tests/build/
 
 tests/robot_tester
+cmake-build-debug
