@@ -47,6 +47,7 @@ CRC_HandleTypeDef hcrc;
 
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
+osThreadId_t ledTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
   .name = "defaultTask",
   .priority = (osPriority_t) osPriorityNormal,
@@ -61,7 +62,7 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_CRC_Init(void);
 void StartDefaultTask(void *argument);
-
+void ledTask(void *argument);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -126,7 +127,7 @@ int main(void)
   /* Create the thread(s) */
   /* creation of defaultTask */
   defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
-
+  ledTaskHandle = osThreadNew(ledTask, NULL, &defaultTask_attributes);
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
@@ -272,10 +273,19 @@ void StartDefaultTask(void *argument)
   for(;;)
   {
 	 // HAL_UART_Transmit(&huart6, buffer, sizeof(buffer), HAL_MAX_DELAY);
-	  HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
-      osDelay(500);
+	  //HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+      //osDelay(500);
   }
   /* USER CODE END 5 */
+}
+
+void ledTask(void *argument){
+    for(;;)
+    {
+        // HAL_UART_Transmit(&huart6, buffer, sizeof(buffer), HAL_MAX_DELAY);
+        HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+        osDelay(500);
+    }
 }
 
 /**

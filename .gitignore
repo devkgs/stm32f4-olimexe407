@@ -13,15 +13,4 @@
 # Netbeans           #
 ######################
 
-nbproject
-
-
-/wheel-board/src/_gpios.c
-/wheel-board/src/_gpios.h
-/utils/bus_speed_test/dist/
-/utils/bus_speed_test/build/
-/tool-board/build/
-/tests/build/
-
-tests/robot_tester
 cmake-build-debug
