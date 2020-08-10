@@ -9,7 +9,7 @@
 *.o
 /common/build/
 /.idea
-/cmake-build-debug/*
+/cmake-build-debug
 ######################
 # Netbeans           #
 ######################
