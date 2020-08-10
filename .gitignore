@@ -6,11 +6,7 @@
 *bin
 *.elf
 *.map
+*.hex
 *.o
 /common/build/
-
-######################
-# Netbeans           #
-######################
-
 cmake-build-debug
